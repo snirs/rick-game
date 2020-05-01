@@ -11,6 +11,9 @@ public class PlayerBars : MonoBehaviour {
     public int currentPortalGunStatus;
     public HealthBar healthBar;
     public PortalGunBar portalGunBar;
+    
+    // The Time's Up text object.
+    public GameObject timesUpText;
 
     // public AudioSource dead;
     public AudioSource lowEnergy;
@@ -31,6 +34,9 @@ public class PlayerBars : MonoBehaviour {
         if(currentPortalGunStatus > 0 ) {
             currentPortalGunStatus -= 1;
             portalGunBar.SetGunPower(currentPortalGunStatus);
+        }else{
+            timesUpText.SetActive (true);
+            Time.timeScale = 0;
         }
 
         if(currentPortalGunStatus == 500){
