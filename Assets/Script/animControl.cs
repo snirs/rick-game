@@ -21,6 +21,14 @@ public class animControl : MonoBehaviour {
         {
             anim.Play("New State");
         }
+         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.Play("Rick_Jump");
+        }
+         if (Input.GetKeyUp(KeyCode.Space))
+        {
+            anim.Play("New State");
+        }
 }
    
 }
