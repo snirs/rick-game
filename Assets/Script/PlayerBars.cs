@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerBars : MonoBehaviour {
 
@@ -11,10 +12,13 @@ public class PlayerBars : MonoBehaviour {
     public int currentPortalGunStatus;
     public HealthBar healthBar;
     public PortalGunBar portalGunBar;
+
+    public PauseMenu pauseMenu;
     
     // The Time's Up text object.
     public GameObject timesUpText;
 
+    public GameObject gameOverMenuUI;
     // public AudioSource dead;
     public AudioSource lowEnergy;
     public AudioSource lowLife;
@@ -37,10 +41,12 @@ public class PlayerBars : MonoBehaviour {
                 portalGunBar.SetGunPower(currentPortalGunStatus);
             }
             }else{
+//            pauseMenu.gameOverMenuUI.SetActive(true);
             timesUpText.SetActive (true);
             Time.timeScale = 0f;
+        
         }
-
+        
         if(currentPortalGunStatus == 500){
             lowEnergy.Play();
         }
@@ -71,8 +77,18 @@ public class PlayerBars : MonoBehaviour {
         }
      }
 
-     public int getPortalGunStatus(){
+    int getPortalGunStatus(){
          return currentPortalGunStatus;
      }
+
+    void RestartGame(){
+        SceneManager.LoadScene("Level1");
+        Time.timeScale = 1f;
+    }
+
+    void LoadMenu(){
+        Application.Quit();
+    }
+
     
 }
