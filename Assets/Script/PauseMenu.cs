@@ -14,20 +14,13 @@ public class PauseMenu : MonoBehaviour
     public PlayerBars playerBars;
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
     if (Input.GetKeyDown(KeyCode.Escape)){
         if (GameIsPaused){
             Resume();
         }else{
             Pause();
         }
-    if (playerBars.currentPortalGunStatus == 0){
-        gameOverMenuUI.SetActive(true);
-        Time.timeScale = 1f;
-        GameIsPaused = true;
-    }
-
     }
         
     }
@@ -38,7 +31,12 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
     
     }
-    
+    public void GameOver(){
+        gameOverMenuUI.SetActive(true);
+        Time.timeScale = 1f;
+        GameIsPaused = true;
+
+    }
     void Pause(){
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;

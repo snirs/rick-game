@@ -2892,7 +2892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1523789287}
-  gameOverMenuUI: {fileID: 0}
+  gameOverMenuUI: {fileID: 1831905250}
   playerBars: {fileID: 0}
 --- !u!1 &491371783
 GameObject:
@@ -10907,8 +10907,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279381039
-  m_fontColor: {r: 0.18431373, g: 0.17254902, b: 0.07058824, a: 1}
+    rgba: 4282132445
+  m_fontColor: {r: 0.8679245, g: 0.1514774, b: 0.2352601, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10932,7 +10932,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -11613,7 +11613,6 @@ GameObject:
   - component: {fileID: 1831905251}
   - component: {fileID: 1831905253}
   - component: {fileID: 1831905252}
-  - component: {fileID: 1831905254}
   m_Layer: 5
   m_Name: GameOverMenu
   m_TagString: Untagged
@@ -11679,21 +11678,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831905250}
   m_CullTransparentMesh: 0
---- !u!114 &1831905254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831905250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2de35096a8794ab4bc60dcf718d866a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
-  gameOverMenuUI: {fileID: 0}
-  playerBars: {fileID: 0}
 --- !u!1 &1837115983
 GameObject:
   m_ObjectHideFlags: 0
@@ -12648,7 +12632,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2050403871}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 478430691}
+        m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2050403871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13204,7 +13199,9 @@ MonoBehaviour:
   currentPortalGunStatus: 3000
   healthBar: {fileID: 951243283}
   portalGunBar: {fileID: 2012503733}
+  pauseMenu: {fileID: 0}
   timesUpText: {fileID: 1731334093}
+  gameOverMenuUI: {fileID: 0}
   lowEnergy: {fileID: 5373056925376945930}
   lowLife: {fileID: 5373056925376945927}
 --- !u!82 &5373056925376945924
