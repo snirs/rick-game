@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public float speed;
+    [SerializeField]
+    private float speed;
 
-    public bool moveRight;
+    private bool moveRight = false;
 
     void Update()
     {
