@@ -32,11 +32,13 @@ public class PlayerBars : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if(currentPortalGunStatus > 0 ) {
-            currentPortalGunStatus -= 1;
-            portalGunBar.SetGunPower(currentPortalGunStatus);
-        }else{
+            if (PauseMenu.GameIsPaused == false){
+                currentPortalGunStatus -= 1;
+                portalGunBar.SetGunPower(currentPortalGunStatus);
+            }
+            }else{
             timesUpText.SetActive (true);
-            Time.timeScale = 0;
+            Time.timeScale = 0f;
         }
 
         if(currentPortalGunStatus == 500){
@@ -67,6 +69,10 @@ public class PlayerBars : MonoBehaviour {
         if (other.gameObject.CompareTag("powerGun")){
            AddPowerPortalGun(400);
         }
+     }
+
+     public int getPortalGunStatus(){
+         return currentPortalGunStatus;
      }
     
 }
