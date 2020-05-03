@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main_RickAndMorty.unity
     guid: 825791394835b4fada1ed79a9b9832ad
   - enabled: 1
+    path: Assets/Scenes/Intro_2.unity
+    guid: 8559ecf2c78414b56a2403f876bd8096
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

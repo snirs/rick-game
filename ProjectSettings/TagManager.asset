@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - turn
   - groundDetection
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Button
   - 
   - 
   - 
@@ -43,11 +44,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: Buttons
+    uniqueID: 3957180399
     locked: 0
   - name: background
     uniqueID: 3174958961
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: air-marks
     uniqueID: 4114251393
