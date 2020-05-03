@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerBars : MonoBehaviour {
 
-    public Animator anim;
-    
-    public int maxHealth = 7;
+ public int maxHealth = 7;
     public int maxPortalGun = 2000;
     public int currentHealthStatus;
     public int currentPortalGunStatus;
@@ -24,12 +22,10 @@ public class PlayerBars : MonoBehaviour {
     // public AudioSource dead;
     public AudioSource lowEnergy;
     public AudioSource lowLife;
-    public AudioSource takeDamage;
     // public AudioSource audioSource;
     
     // Start is called before the first frame update
     void Start() {
-        anim = GetComponent<Animator>();
         currentHealthStatus = maxHealth;
         currentPortalGunStatus = maxPortalGun;
 
@@ -75,17 +71,9 @@ public class PlayerBars : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("enemy triger!");
+          Debug.Log("enemy triger!");
         if (other.gameObject.CompareTag("powerGun")){
            AddPowerPortalGun(400);
-        }
-
-        else if (other.gameObject.CompareTag("enemy")){
-        TakeDamage(1);
-        anim.Play("rickTakeDamage");
-        takeDamage.Play();
-
-        Debug.Log("Damage is");
         }
      }
 
